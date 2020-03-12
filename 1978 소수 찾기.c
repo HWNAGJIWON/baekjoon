@@ -1,0 +1,41 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h> 
+
+int array[100];
+int main(void) {
+   int num;
+   scanf("%d", &num);
+   
+
+   for (int i = 0; i < num; i++) {
+      scanf("%d", &array[i]);
+   }
+
+   int result= 0;
+   int count;
+
+   for (int j = 0; j < num; j++) {
+      int end = array[j];
+      if (end < 2) {
+         continue;
+      }
+      else if (end == 2){
+         result++;
+         continue;
+      }
+      else if(end >= 3){
+         count = 1;
+         for (int i = 2; i < end; i++) {
+            
+            if (end % i != 0) {
+               count++;
+            } 
+         }
+         if (count == end - 1) {
+            result++;
+            
+         }
+      }
+   }
+   printf("%d", result);
+}
