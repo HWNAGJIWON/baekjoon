@@ -1,6 +1,8 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h> 
 #include <stdbool.h>
+
+
 bool visited[10000][10000] = { false , };
 bool visited2[10000][10000] = { false, };
 short connect[1001][1001] = { 0, };	//vertex끼리 연결되면 1
